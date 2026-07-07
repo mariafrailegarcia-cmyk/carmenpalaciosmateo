@@ -7,7 +7,7 @@ export default function Inicio() {
   return (
     <div className="pt-8 pb-16 md:pt-16">
       <header>
-        <h1 className="max-w-2xl text-[clamp(2.125rem,4.5vw,3.375rem)] leading-[1.08] tracking-[-0.01em]">
+        <h1 className="max-w-2xl text-[clamp(2rem,4.25vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.025em]">
           Carmen Palacios Mateo
         </h1>
         <nav
