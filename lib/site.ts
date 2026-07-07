@@ -7,7 +7,7 @@
 export const site = {
   name: "Carmen Palacios Mateo",
   description:
-    "Sitio personal de la artista Carmen Palacios Mateo. Obra, biografía y contacto.",
+    "Sitio personal de la artista Carmen Palacios Mateo. Escultura: obra, biografía y contacto.",
   // PLACEHOLDER — sustituir por el email real
   email: "hola@carmenpalaciosmateo.com",
   // PLACEHOLDER — sustituir por los perfiles reales (o eliminar entradas)

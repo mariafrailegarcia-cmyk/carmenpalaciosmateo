@@ -19,11 +19,10 @@ Importa el repositorio en Vercel: detecta Next.js automáticamente, sin configur
 | Contenido | Archivo |
 |---|---|
 | Imágenes de obras | `public/obras/obra-01.jpg` … `obra-06.jpg` (mismo nombre) + dimensiones en `lib/obras.ts` |
-| Obra destacada del inicio | `obraDestacada` en `lib/obras.ts` |
 | Email y redes sociales | `lib/site.ts` |
 | Texto de biografía | `app/biografia/page.tsx` |
 
-Las imágenes actuales son **placeholders** (gradientes de gris). Al sustituirlas, actualiza `width`/`height` en `lib/obras.ts` con las dimensiones reales para que `next/image` reserve el espacio correcto.
+Las imágenes actuales son **placeholders** (siluetas neutras sobre fondo claro). Al sustituirlas, actualiza `width`/`height` en `lib/obras.ts` con las dimensiones reales para que `next/image` reserve el espacio correcto. Las obras son esculturas: las imágenes se muestran siempre **enteras** (`object-contain` en la banda del inicio, tamaño natural en Obras) — nunca se recortan con `cover`.
 
 ## Sistema de diseño
 
@@ -39,12 +38,13 @@ app/
   layout.tsx        # fuentes, header, footer, metadatos
   template.tsx      # transición de entrada de página
   globals.css       # tokens de diseño (colores, tipografías)
-  page.tsx          # Inicio
+  page.tsx          # Inicio (nombre + banda con las 6 obras)
   obras/page.tsx    # Galería
   biografia/page.tsx
   contacto/page.tsx
 components/
-  Header.tsx        # navegación superior
+  Header.tsx        # navegación superior (oculta en el inicio)
+  NavLinks.tsx      # enlaces de navegación compartidos
   Footer.tsx
 lib/
   site.ts           # nombre, email, redes (placeholders)
