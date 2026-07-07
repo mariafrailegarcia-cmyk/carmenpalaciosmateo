@@ -15,31 +15,29 @@ export default function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header className="mx-auto w-full max-w-7xl px-6 pt-6 pb-16 md:px-10 md:pt-10">
+    <header className="mx-auto w-full max-w-7xl px-6 pt-6 pb-16 md:px-10 md:pt-8">
       <nav
         aria-label="Principal"
-        className="flex items-baseline justify-between gap-6 text-[0.6875rem] tracking-[0.18em] uppercase"
+        className="flex items-baseline justify-between gap-6 text-xs"
       >
-        {/* En el inicio el nombre ya es el protagonista: la marca se omite */}
+        {/* En el inicio el nombre ya está en la página: la marca se omite */}
         <Link
           href="/"
-          className={`transition-opacity duration-300 hover:opacity-60 ${
+          className={`transition-colors duration-300 hover:text-mist ${
             isHome ? "invisible" : ""
           }`}
         >
           {site.name}
         </Link>
-        <ul className="flex gap-6 md:gap-10">
+        <ul className="flex gap-5 md:gap-8">
           {links.map(({ href, label }) => {
             const active = pathname.startsWith(href);
             return (
               <li key={href}>
                 <Link
                   href={href}
-                  className={`pb-1 transition-colors duration-300 ${
-                    active
-                      ? "border-b border-ink"
-                      : "border-b border-transparent text-mist hover:text-ink"
+                  className={`transition-colors duration-300 ${
+                    active ? "text-ink" : "text-mist hover:text-ink"
                   }`}
                 >
                   {label}

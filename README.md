@@ -27,8 +27,8 @@ Las imágenes actuales son **placeholders** (gradientes de gris). Al sustituirla
 
 ## Sistema de diseño
 
-- **Tipografías** (vía `next/font`): [Newsreader](https://fonts.google.com/specimen/Newsreader) para títulos (serif editorial con tamaños ópticos) e [Instrument Sans](https://fonts.google.com/specimen/Instrument+Sans) para texto y navegación.
-- **Paleta** (tokens en `app/globals.css`): `paper` #fbfaf7 (fondo), `ink` #191817 (texto), `mist` #706c66 (texto secundario), `line` #e6e3dd (filetes).
+- **Tipografía** (vía `next/font`): una sola familia, [Inter](https://fonts.google.com/specimen/Inter), en pesos regulares — sin display ni cursivas.
+- **Paleta** (tokens en `app/globals.css`): `paper` #ffffff (fondo), `ink` #111111 (texto), `mist` #737373 (texto secundario), `line` #e5e5e5 (filetes).
 - **Espaciado**: escala única de 8 pasos — 4 / 8 / 16 / 24 / 40 / 64 / 104 / 168 px (Tailwind `1 / 2 / 4 / 6 / 10 / 16 / 26 / 42`). No usar valores fuera de la escala en layouts.
 - **Movimiento**: solo un fundido de entrada por página (`app/template.tsx`) y transiciones de color/opacidad en enlaces. Respeta `prefers-reduced-motion`.
 

@@ -10,13 +10,10 @@ export default function Obras() {
   return (
     <div className="pb-16">
       <h1 className="sr-only">Obras</h1>
-      {/* Scroll vertical: una obra por pantalla aprox., alineación alternada */}
+      {/* Scroll vertical: una obra por pantalla aprox., bien respirada */}
       <ul className="space-y-26 md:space-y-42">
-        {obras.map((obra, i) => (
-          <li
-            key={obra.src}
-            className={`flex ${i % 2 === 1 ? "justify-end" : "justify-start"}`}
-          >
+        {obras.map((obra) => (
+          <li key={obra.src} className="flex justify-center">
             <Image
               src={obra.src}
               alt={obra.alt}
