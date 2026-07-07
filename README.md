@@ -12,7 +12,16 @@ npm run build    # build de producción
 
 ## Despliegue en Vercel
 
-Importa el repositorio en Vercel: detecta Next.js automáticamente, sin configuración extra.
+El repositorio está listo para desplegar tal cual (build estática verificada, sin variables de entorno ni configuración extra). Falta únicamente **importarlo una vez** en una cuenta de Vercel — hasta que se haga, los push a GitHub no publican nada:
+
+1. Entra en [vercel.com/new](https://vercel.com/new) con tu cuenta (créala con "Continue with GitHub" si no la tienes).
+2. Autoriza a Vercel el acceso a GitHub cuando lo pida y elige el repositorio `carmenpalaciosmateo` en la lista → **Import**.
+3. No cambies nada en la pantalla de configuración (detecta Next.js automáticamente) → **Deploy**.
+4. En ~1 minuto tendrás la URL pública (`carmenpalaciosmateo.vercel.app` o similar).
+
+Desde ese momento, **cada push a `main` despliega automáticamente**. El dominio propio (p. ej. `carmenpalaciosmateo.com`) se añade después en *Project → Settings → Domains*.
+
+Si el proyecto ya estuviera importado y aun así no se actualiza: comprueba en *Project → Settings → Git* que la rama de producción es `main`, y mira el estado del último deploy en la pestaña *Deployments*.
 
 ## Dónde sustituir contenidos
 
