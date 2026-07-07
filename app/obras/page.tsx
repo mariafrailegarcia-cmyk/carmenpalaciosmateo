@@ -16,15 +16,15 @@ export default function Obras() {
           <li
             key={obra.src}
             id={obraId(obra)}
-            className="flex scroll-mt-10 justify-center"
+            className="flex scroll-mt-10 justify-center px-4 md:px-0"
           >
             <Image
               src={obra.src}
               alt={obra.alt}
               width={obra.width}
               height={obra.height}
-              sizes="(min-width: 768px) 56rem, 100vw"
-              className="h-auto w-full max-w-4xl"
+              sizes="(min-width: 768px) 48rem, 90vw"
+              className="h-auto w-full max-w-3xl"
             />
           </li>
         ))}

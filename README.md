@@ -26,8 +26,8 @@ Las imágenes actuales son **placeholders** (siluetas neutras sobre fondo claro)
 
 ## Sistema de diseño
 
-- **Tipografía**: stack de sistema tipo Helvetica (`-apple-system` / `Helvetica Neue` / `Arial`) — sans recta y neutra, sin webfonts. El nombre y los títulos en semibold con tracking negativo (letras compactas); sin cursivas en ninguna parte.
-- **Paleta** (tokens en `app/globals.css`), neutra e institucional: `paper` #fdfdfd (fondo blanco), `ink` #1a1a1a (texto casi negro), `mist` #6f6f6f (texto secundario), `line` #e4e4e4 (filetes).
+- **Tipografía**: stack de sistema tipo Helvetica (`-apple-system` / `Helvetica Neue` / `Arial`) — sans recta y neutra, sin webfonts. **Todo el sitio en negrita** (700, definido en `body`); el nombre y los títulos con tracking negativo (letras compactas); sin cursivas en ninguna parte.
+- **Paleta** (tokens en `app/globals.css`), neutra e institucional: `paper` #faf9f6 (blanco crudo), `ink` #2b2b2b (negro apagado), `mist` #6f6f6f (texto secundario), `line` #e6e4df (filetes).
 - **Espaciado**: escala única de 8 pasos — 4 / 8 / 16 / 24 / 40 / 64 / 104 / 168 px (Tailwind `1 / 2 / 4 / 6 / 10 / 16 / 26 / 42`). No usar valores fuera de la escala en layouts.
 - **Movimiento**: solo un fundido de entrada por página (`app/template.tsx`) y transiciones de color/opacidad en enlaces. Respeta `prefers-reduced-motion`.
 
