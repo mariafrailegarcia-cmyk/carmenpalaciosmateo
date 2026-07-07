@@ -5,45 +5,50 @@ import { obras, obraId } from "@/lib/obras";
 
 export default function Inicio() {
   return (
-    <div className="pt-6 pb-16 md:pt-8">
+    <div className="pt-8 pb-16 md:pt-16">
       <header>
-        <h1 className="text-[clamp(2.25rem,7vw,5.25rem)] leading-[1.04] tracking-[-0.03em]">
+        <h1 className="max-w-2xl text-[clamp(2rem,4.25vw,3.25rem)] leading-[1.05] font-semibold tracking-[-0.025em]">
           Carmen Palacios Mateo
         </h1>
-        <p className="mt-2 text-sm text-mist">Escultura</p>
-        <nav aria-label="Principal" className="mt-6 text-xs">
+        <nav
+          aria-label="Principal"
+          className="mt-10 border-b border-line pb-3 text-[0.8125rem]"
+        >
           <NavLinks />
         </nav>
       </header>
 
       {/*
-        Banda de obras: las seis esculturas en fila, apoyadas sobre una
-        misma línea de base (object-contain + object-bottom: la pieza
-        nunca se recorta). 2 columnas en móvil, 3 en tablet, 6 en desktop.
+        Banda de obras: tira continua a sangre completa, las seis piezas a la
+        misma altura y pegadas entre sí (sin gutter), como una tira de
+        archivo. La altura en desktop (15.4vw) hace que las seis proporciones
+        actuales sumen ≈100vw; si al sustituir las fotos la tira excede el
+        ancho, el contenedor permite scroll horizontal sin romper nada.
+        En móvil la tira se conserva con scroll horizontal y snap suave.
       */}
-      <ul className="mt-16 grid grid-cols-2 gap-x-4 gap-y-10 md:mt-26 md:grid-cols-3 md:gap-x-6 lg:grid-cols-6">
-        {obras.map((obra) => (
-          <li key={obra.src}>
-            <Link
-              href={`/obras#${obraId(obra)}`}
-              className="group block"
-              aria-label={`${obra.alt} — ver en Obras`}
-            >
-              <span className="flex h-[26vh] items-end md:h-[34vh] lg:h-[42vh]">
+      <div className="relative left-1/2 mt-16 w-screen -translate-x-1/2 overflow-x-auto md:mt-26">
+        <ul className="mx-auto flex w-max snap-x snap-proximity">
+          {obras.map((obra) => (
+            <li key={obra.src} className="snap-start">
+              <Link
+                href={`/obras#${obraId(obra)}`}
+                className="group block h-[52vw] sm:h-[34vw] lg:h-[15.4vw]"
+                aria-label={`${obra.alt} — ver en Obras`}
+              >
                 <Image
                   src={obra.src}
                   alt={obra.alt}
                   width={obra.width}
                   height={obra.height}
                   priority
-                  sizes="(min-width: 1024px) 16vw, (min-width: 768px) 33vw, 50vw"
-                  className="h-full w-full object-contain object-bottom transition-opacity duration-300 group-hover:opacity-75"
+                  sizes="(min-width: 1024px) 20vw, (min-width: 640px) 40vw, 60vw"
+                  className="h-full w-auto object-contain transition-opacity duration-300 group-hover:opacity-80"
                 />
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ul>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
