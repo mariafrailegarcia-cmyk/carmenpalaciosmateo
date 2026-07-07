@@ -15,7 +15,7 @@ export default function Header() {
     <header className="mx-auto w-full max-w-7xl px-6 pt-6 pb-16 md:px-10 md:pt-8">
       <nav
         aria-label="Principal"
-        className="flex items-baseline justify-between gap-6 text-xs"
+        className="flex items-baseline justify-between gap-6 border-b border-line pb-3 text-[0.8125rem]"
       >
         <Link
           href="/"

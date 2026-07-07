@@ -8,12 +8,12 @@
   Equivalencias Tailwind: 1 · 2 · 4 · 6 · 10 · 16 · 26 · 42
 */
 @theme {
-  --color-paper: #ffffff;
-  --color-ink: #111111;
-  --color-mist: #737373;
-  --color-line: #e5e5e5;
+  --color-paper: #f4efe6;
+  --color-ink: #2e2924;
+  --color-mist: #7a7161;
+  --color-line: #d8cfbf;
 
-  --font-sans: var(--font-inter), "Inter", system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), "Fraunces", Georgia, serif;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
 body {
   background-color: var(--color-paper);
   color: var(--color-ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }

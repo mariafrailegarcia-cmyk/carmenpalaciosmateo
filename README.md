@@ -26,8 +26,8 @@ Las imágenes actuales son **placeholders** (siluetas neutras sobre fondo claro)
 
 ## Sistema de diseño
 
-- **Tipografía** (vía `next/font`): una sola familia, [Inter](https://fonts.google.com/specimen/Inter), en pesos regulares — sin display ni cursivas.
-- **Paleta** (tokens en `app/globals.css`): `paper` #ffffff (fondo), `ink` #111111 (texto), `mist` #737373 (texto secundario), `line` #e5e5e5 (filetes).
+- **Tipografía** (vía `next/font`): una sola familia, [Fraunces](https://fonts.google.com/specimen/Fraunces) — serif old-style con tamaños ópticos: cálida y con carácter en el nombre y los títulos, sobria a cuerpo pequeño en navegación y texto. Cursiva para pies y metadatos.
+- **Paleta** (tokens en `app/globals.css`), calidez de papel de archivo: `paper` #f4efe6 (fondo hueso), `ink` #2e2924 (sepia carbón), `mist` #7a7161 (topo cálido), `line` #d8cfbf (filetes).
 - **Espaciado**: escala única de 8 pasos — 4 / 8 / 16 / 24 / 40 / 64 / 104 / 168 px (Tailwind `1 / 2 / 4 / 6 / 10 / 16 / 26 / 42`). No usar valores fuera de la escala en layouts.
 - **Movimiento**: solo un fundido de entrada por página (`app/template.tsx`) y transiciones de color/opacidad en enlaces. Respeta `prefers-reduced-motion`.
 
@@ -38,7 +38,7 @@ app/
   layout.tsx        # fuentes, header, footer, metadatos
   template.tsx      # transición de entrada de página
   globals.css       # tokens de diseño (colores, tipografías)
-  page.tsx          # Inicio (nombre + banda con las 6 obras)
+  page.tsx          # Inicio (nombre + banda continua con las 6 obras)
   obras/page.tsx    # Galería
   biografia/page.tsx
   contacto/page.tsx
